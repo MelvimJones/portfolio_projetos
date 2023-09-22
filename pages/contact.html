@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../intro.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#"></a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="/index.html" style="--navAni:1">Home</a></li>
+                <li><a href="./about.html" style="--navAni:2">About</a></li>
+                <li><a href="./skills.html" style="--navAni:3">Training</a></li>
+                <li><a href="./portfolio.html" style="--navAni:4">Portfolio</a></li>
+                <li><a href="./contact.html" class="active" style="--navAni:5">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i id="themeIcon" class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="main">
+            <div class="detail">
+                <h3></h3>
+                <h1><span style="color:#f9532d;">Contato</span></h1>
+                <h3>Informações de Contato</h3>
+                <p>Sinta-se à vontade para entrar em contato comigo a qualquer momento. Prefiro conversar por e-mail,
+                    principalmente porque podemos estar a alguns fusos horários de distância.</p>
+                <p><strong>Email:</strong> <a href="mailto:melvimjones32@gmail.com">melvimjones32@gmail.com</a></p>
+                <h3>Disponibilidade Atual</h3>
+                <p>Normalmente trabalho em vários projetos, mas ficarei feliz em discutir novas oportunidades. </p>
+                <p>Vamos entrar em contato!</p>
+
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/melvimjones/" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/melvim_jones/" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/MelvimJones" style="--socialAni:3"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.facebook.com/melvimjones" style="--socialAni:4"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=55067992665457" style="--socialAni:4"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+            </div>
+            <div class="img-sec">
+                <div class="images">
+                    <img src="f-1.png" alt="" class="img-w">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        const themeIcon = document.getElementById('themeIcon');
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+        // Função para atualizar o ícone com base no modo escuro
+        function updateThemeIcon() {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+                themeIcon.className = 'bx bxs-moon'; // Ícone da lua (modo escuro ativado)
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+                themeIcon.className = 'bx bxs-sun'; // Ícone do sol (modo escuro desativado)
+            }
+        }
+
+        // Verifica o modo escuro na inicialização
+        if (isDarkMode) {
+            darkModeToggle.checked = true;
+        }
+
+        // Adiciona um ouvinte de evento para o toggle do modo escuro
+        darkModeToggle.addEventListener('change', updateThemeIcon);
+
+        // Atualiza o ícone do tema com base no modo escuro atual
+        updateThemeIcon();
+    </script>
+
+</body>
+
+</html>
