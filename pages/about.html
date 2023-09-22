@@ -58,17 +58,23 @@
             </div>
             <div class="img-sec">
                 <div class="images">
-                    <lord-icon src="https://cdn.lordicon.com/gqqykmqo.json"
-                    trigger="loop"
-                    delay="200"
-                    colors="outline:#121331,primary:#646e78,secondary:#ad6836,tertiary:#4faef9,quaternary:#f3c3ba"
-                    style="width:450px;height:450px">
+                    <lord-icon src="https://cdn.lordicon.com/gqqykmqo.json" trigger="loop" delay="200"
+                        colors="outline:#121331,primary:#646e78,secondary:#ad6836,tertiary:#4faef9,quaternary:#f3c3ba"
+                        style="width:450px;height:450px">
                     </lord-icon>
                 </div>
             </div>
         </div>
     </section>
     <script>
+
+        // Verifica se a URL termina com "/" e redireciona para "index.html" se necessário
+        if (window.location.pathname.endsWith("index.html")) {
+            window.location.href = "/";
+        }
+
+        /* --------------------------- */
+
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;
         const isDarkMode = localStorage.getItem('darkMode') === 'enabled';

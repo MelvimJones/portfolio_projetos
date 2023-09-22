@@ -52,11 +52,15 @@
                 <p>Vamos entrar em contato!</p>
 
                 <div class="social">
-                    <a href="https://www.linkedin.com/in/melvimjones/" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://www.instagram.com/melvim_jones/" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.linkedin.com/in/melvimjones/" style="--socialAni:1"><i
+                            class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/melvim_jones/" style="--socialAni:2"><i
+                            class='bx bxl-instagram'></i></a>
                     <a href="https://github.com/MelvimJones" style="--socialAni:3"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.facebook.com/melvimjones" style="--socialAni:4"><i class='bx bxl-facebook-circle'></i></a>
-                    <a href="https://api.whatsapp.com/send?phone=55067992665457" style="--socialAni:4"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="https://www.facebook.com/melvimjones" style="--socialAni:4"><i
+                            class='bx bxl-facebook-circle'></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=55067992665457" style="--socialAni:4"><i
+                            class='bx bxl-whatsapp'></i></a>
                 </div>
             </div>
             <div class="img-sec">
@@ -67,6 +71,14 @@
         </div>
     </section>
     <script>
+
+        // Verifica se a URL termina com "/" e redireciona para "index.html" se necessário
+        if (window.location.pathname.endsWith("index.html")) {
+            window.location.href = "/";
+        }
+
+        /* --------------------------- */
+
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;
         const isDarkMode = localStorage.getItem('darkMode') === 'enabled';

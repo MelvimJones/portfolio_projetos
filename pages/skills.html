@@ -49,14 +49,14 @@
                     no back-end, proporcionando soluções completas e eficientes.</p>
                 <p>Aqui estão algumas das principais tecnologias que domino:</p>
                 <ul>
-                    <div class="social" >
+                    <div class="social">
                         <iconify-icon icon="akar-icons:node-fill"></iconify-icon>
                         <a href="#" style="--socialAni:1"><i class='bx bxl-nodejs'></i></a>
                         <a href="#" style="--socialAni:2"><i class='bx bxl-html5'></i></a>
                         <a href="#" style="--socialAni:3"><i class='bx bxl-javascript'></i></a>
                         <a href="#" style="--socialAni:4"><i class='bx bxl-css3'></i></a>
                         <a href="#" style="--socialAni:5"><i class='bx bxl-java'></i></a>
-                    
+
                         <a href="#" style="--socialAni:6"><i class='bx bxl-mongodb'></i></a>
                         <a href="#" style="--socialAni:7"><i class='bx bxl-git'></i></a>
                         <a href="#" style="--socialAni:8"><i class='bx bxl-vuejs'></i></a>
@@ -67,18 +67,22 @@
             </div>
             <div class="img-sec">
                 <div class="images">
-                    <lord-icon
-                    src="https://cdn.lordicon.com/myroguwc.json"
-                    trigger="loop"
-                    delay="200"
-                    colors="outline:#121331,primary:#4bb3fd,secondary:#ebe6ef"
-                    style="width:400px;height:400px">
+                    <lord-icon src="https://cdn.lordicon.com/myroguwc.json" trigger="loop" delay="200"
+                        colors="outline:#121331,primary:#4bb3fd,secondary:#ebe6ef" style="width:400px;height:400px">
                     </lord-icon>
                 </div>
             </div>
         </div>
     </section>
     <script>
+
+        // Verifica se a URL termina com "/" e redireciona para "index.html" se necessário
+        if (window.location.pathname.endsWith("index.html")) {
+            window.location.href = "/";
+        }
+
+        /* --------------------------- */
+
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;
         const isDarkMode = localStorage.getItem('darkMode') === 'enabled';

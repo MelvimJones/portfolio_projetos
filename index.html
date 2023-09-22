@@ -48,7 +48,7 @@
 
                 <h3><span>Precisando de um desenvolvedor?</span></h3>
                 <p>Vamos trabalhar juntos!</p>
-                <div class="social" >
+                <div class="social">
                     <a href="https://www.linkedin.com/in/melvimjones/" style="--socialAni:1"><i
                             class='bx bxl-linkedin'></i></a>
                     <a href="#" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
@@ -68,6 +68,11 @@
         </div>
     </section>
     <script>
+
+        // Verifica se a URL termina com "/" e redireciona para "index.html" se necessário
+        if (window.location.pathname.endsWith("index.html")) {
+            window.location.href = "/";
+        }
 
         /* --------------------------- */
 
