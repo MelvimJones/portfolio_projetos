@@ -192,7 +192,9 @@ li a:hover {
     border-radius: 6px;
     z-index: -1;
 }
-
+footer{
+    height: 27px;
+}
 .images::before {
     background: linear-gradient(145deg, #325265, #ffffff);
     box-shadow: 5px 5px 15px #9ca2ab, -5px -5px 15px #ffffff;
@@ -208,12 +210,19 @@ li a:hover {
 
 .images {
     /* display: contents; */
-    margin: auto;
-    width: 80%;
+    margin: 0 0 47px 8px;
+    width: 60%;
+    height: 285px;
     margin-left: 0;
     opacity: 0;
     animation: imageAni 1s ease forwards;
     animation-delay: 1.5s;
+}
+.Formacao{
+    margin: 10px;
+    width: 90%;
+    border-radius: 4px;
+    background-color: #e4d0ef0e;
 }
 
 .borda {
