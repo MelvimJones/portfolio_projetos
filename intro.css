@@ -17,12 +17,14 @@ body {
     margin: 0 0 50px;
 
 }
+
 /* Genral */
 .container {
     padding: 0 2rem;
 }
-.detail{
-    
+
+.detail {
+
     padding: 0 0 0 5px;
     scroll-behavior: smooth;
 }
@@ -30,17 +32,21 @@ body {
 .img-w {
     width: 100%;
 }
-.img-sec{
+
+.img-sec {
     margin: 0;
     scroll-behavior: smooth;
 }
+
 /* Nav */
 header {
     position: relative;
     box-shadow: 0 4px 17px rgba(0, 0, 0, .1);
     background: #fff;
-    position: sticky;
+    position: sticky; 
     top: 0;
+    z-index: 9999;
+    /* Defina um valor alto para o z-index */
 }
 
 .page-header {
@@ -48,6 +54,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+   
 }
 
 .logo {
@@ -116,11 +123,13 @@ li a:hover {
     row-gap: 2rem;
     align-items: center;
 }
+
 .main h3 {
     font-size: 1.5rem;
     opacity: 0;
     animation: topSideAni 1s ease forwards;
 }
+
 .main h1 {
     font-size: 4rem;
     font-weight: 600;
@@ -142,7 +151,8 @@ li a:hover {
     gap: 1.4rem;
     margin-top: 1.7rem;
 }
-.social-intro{
+
+.social-intro {
     display: flex;
     flex-wrap: wrap;
     gap: 1.4rem;
@@ -193,8 +203,9 @@ li a:hover {
     width: 60%;
     margin-left: auto;
     position: relative;
-    z-index: -1;
+    /* z-index: -1; */
 }
+
 .images {
     /* display: contents; */
     margin: auto;
@@ -204,13 +215,16 @@ li a:hover {
     animation: imageAni 1s ease forwards;
     animation-delay: 1.5s;
 }
-.borda{
+
+.borda {
     padding: 20px 0 20px;
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
     align-items: center;
-    box-shadow: rgba(130, 129, 129, 0.464) 5px 5px 15px, rgb(130, 129, 129, 0.464) -5px -5px 15px;
+    box-shadow: 0px 20px 20px -20px rgba(130, 129, 129, 0.464);
+    /* 
+    box-shadow: rgba(130, 129, 129, 0.464) 0px 0px 8px, rgb(130, 129, 129, 0.464) 0px 0px 15px;*/
 }
 
 /* Section 1 End */
@@ -259,51 +273,61 @@ li a:hover {
         transform: translateX(-100px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
+
 @keyframes navani {
     0% {
         transform: translateY(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
+
 @keyframes rightSideAni {
     0% {
         transform: translateX(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
+
 @keyframes topSideAni {
     0% {
         transform: translateY(-100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
+
 @keyframes SocialAni {
     0% {
         transform: translateY(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
+
 /* @keyframes ImgAni {
     0% {
         transform: translateX(0);
@@ -320,6 +344,7 @@ li a:hover {
         opacity: 0;
         transform: scale(0);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -394,13 +419,17 @@ li a:hover {
     /*  */
 
     .images {
-        position: relative; /* Adiciona uma posição relativa */
-        overflow: hidden; /* Esconde qualquer conteúdo que saia do contêiner */
-        transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de zoom */
+        position: relative;
+        /* Adiciona uma posição relativa */
+        overflow: hidden;
+        /* Esconde qualquer conteúdo que saia do contêiner */
+        transition: transform 0.3s ease;
+        /* Adiciona uma transição suave para o efeito de zoom */
     }
 
     .zoom-effect:hover {
-        transform: scale(1.1); /* Aumenta a escala em 10% quando o mouse estiver sobre a imagem */
+        transform: scale(1.1);
+        /* Aumenta a escala em 10% quando o mouse estiver sobre a imagem */
     }
 
     /* Estilos adicionais para ajustar a imagem dentro do contêiner, se necessário */
